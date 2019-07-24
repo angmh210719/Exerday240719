@@ -1,0 +1,20 @@
+.ok {
+    color : green
+}
+
+.empty {
+    color : red;
+  
+}
+.partEmpty {
+    color : orange;
+  
+}
+.notEmpty {
+    color : blue;
+  
+}
+.other {
+    color : green;
+  
+}
