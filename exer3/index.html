@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="globalconst.service.js"></script>
+    <script src="data.service.js"></script>
+    <script src="api.service.js"></script>
+    <script src="service.service.js"></script>
+
+    <script src="implctrl.js"></script>
+    <script src="sumctrl.js"></script>
+    <script src="divedCtrl.js"></script>
+    <script src="oneToACtrl.js"></script>
+    <script src="bToOnectrl.js"></script> 
+
+</head>
+<body >
+
+    <div ng-controller="implCtrl">
+        <p>a: <input type="number" ng-model="ds.a"></input></p>
+        <p>b: <input type="number" ng-model="ds.b"></input></p>
+       <input type="radio" name="col">green</input>
+       <input type="radio" name="col">yellow</input>
+       <input type="radio" name="col">blue</input>
+       <input type="radio" name="col">brown</input>
+
+    </div>
+
+    
+    <div ng-controller="sumctrl">
+        <p>{{ds.a+ds.b}}</p>
+
+    </div>
+
+    <div ng-controller="divedCtrl">
+        <p>{{ds.a/ds.b}}</p>
+        
+
+    </div>
+    <div ng-controller="oneToACtrl">
+        <span ng-repeat="n in [].constructor(ds.a) track by $index">
+            {{ $index }}</span>
+
+    </div>
+    <div ng-controller="bToOneCtrl">
+        <p ng-repeat='i in ds.b.reverse()'>{{i}}</p>
+
+    </div>
+    <br>
+</body>
+</html>
