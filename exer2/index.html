@@ -1,0 +1,33 @@
+    
+<!DOCTYPE html>
+<html ng-app="modulesApp">
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+
+    <!-- dependency module -->
+    <script src="mySecondModule.js"></script>
+    <script src="myThirdModule.js"></script>
+
+    <script src="bootstrap.js"></script>
+
+    <script src="firstCtrl.js"></script>
+</head>
+<body >
+
+    <div ng-controller="firstCtrl as f">
+        <p>{{f.message}}</p>
+    </div>
+
+    <div ng-controller="helloSecondController as s">
+        <p>{{s.message}}</p>
+    </div>
+
+    <div ng-controller="helloThirdController as t">
+        <p>{{t.message}}</p>
+    </div>
+
+    
+    <br>
+</body>
+</html>
